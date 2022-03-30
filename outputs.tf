@@ -29,7 +29,7 @@ output "id" {
 }
 
 output "instance_ids" {
-  value       = aws_rds_cluster_instance.*.id
+  value       = aws_rds_cluster_instance.cluster_instances[*].id
   description = "ID's of RDS Aurora instances"
 }
 
